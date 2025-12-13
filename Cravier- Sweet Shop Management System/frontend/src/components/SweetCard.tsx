@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useCart } from '@/context/CartContext';
+import { useAuth } from '@/context/AuthContext'; // Import useAuth
 import type { Sweet } from '@/types/sweet';
 import { ShoppingCart, Package, AlertCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -21,6 +22,8 @@ const categoryColors: Record<string, string> = {
 
 export function SweetCard({ sweet }: SweetCardProps) {
   const { addToCart, items } = useCart();
+  const { isAdmin } = useAuth(); // Get Admin status
+  
   const cartItem = items.find(item => item.sweet.id === sweet.id);
   const availableStock = sweet.quantity - (cartItem?.quantity || 0);
   const isOutOfStock = availableStock <= 0;
@@ -91,7 +94,7 @@ export function SweetCard({ sweet }: SweetCardProps) {
             {isOutOfStock ? 'Out of Stock' : `${availableStock} available`}
             {isLowStock && !isOutOfStock && ' (Low)'}
           </span>
-          {cartItem && (
+          {cartItem && !isAdmin && ( // Hide "in cart" text for admin too
             <span className="text-xs text-primary font-medium">
               ({cartItem.quantity} in cart)
             </span>
@@ -103,15 +106,19 @@ export function SweetCard({ sweet }: SweetCardProps) {
           <div className="text-xl font-bold text-primary">
             ${sweet.price.toFixed(2)}
           </div>
-          <Button
-            onClick={handleAddToCart}
-            disabled={isOutOfStock}
-            size="sm"
-            className="gap-2 rounded-xl"
-          >
-            <ShoppingCart className="w-4 h-4" />
-            Add to Cart
-          </Button>
+          
+          {/* HIDE BUTTON IF ADMIN */}
+          {!isAdmin && (
+            <Button
+              onClick={handleAddToCart}
+              disabled={isOutOfStock}
+              size="sm"
+              className="gap-2 rounded-xl"
+            >
+              <ShoppingCart className="w-4 h-4" />
+              Add to Cart
+            </Button>
+          )}
         </div>
       </div>
     </div>

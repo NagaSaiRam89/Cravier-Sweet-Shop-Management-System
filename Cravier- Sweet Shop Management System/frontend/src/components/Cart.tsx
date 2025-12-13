@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter, SheetDescription } from '@/components/ui/sheet';
 import { useCart } from '@/context/CartContext';
 import { ShoppingCart, Plus, Minus, Trash2, Package } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -37,6 +37,9 @@ export function Cart() {
               </span>
             )}
           </SheetTitle>
+          <SheetDescription className="sr-only">
+      View and manage items in your shopping cart
+        </SheetDescription>
         </SheetHeader>
 
         {items.length === 0 ? (
