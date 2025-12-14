@@ -102,7 +102,13 @@ if (process.env.NODE_ENV !== 'test') {
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:8080",                 // Local development
+    "https://cravier-sweet-shop-management-syste.vercel.app/" // <--- ADD YOUR VERCEL URL HERE
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
