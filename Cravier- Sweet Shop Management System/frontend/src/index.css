@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sweet Shop Design System - Modern & Minimal with Candy Accents */
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 40 33% 98%;
+    --foreground: 20 25% 20%;
+
+    /* Cards with soft white */
+    --card: 0 0% 100%;
+    --card-foreground: 20 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 25% 20%;
+
+    /* Primary - Warm terracotta/rose */
+    --primary: 24 60% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft mint */
+    --secondary: 150 30% 92%;
+    --secondary-foreground: 150 35% 30%;
+
+    /* Muted - Warm gray */
+    --muted: 30 20% 94%;
+    --muted-foreground: 20 10% 50%;
+
+    /* Accent - Soft pink */
+    --accent: 340 50% 94%;
+    --accent-foreground: 340 50% 40%;
+
+    /* Destructive */
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & inputs */
+    --border: 30 20% 90%;
+    --input: 30 20% 90%;
+    --ring: 24 60% 55%;
+
+    --radius: 0.75rem;
+
+    /* Success color for mint badges */
+    --success: 150 45% 50%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning for low stock */
+    --warning: 40 90% 55%;
+    --warning-foreground: 40 90% 20%;
+
+    /* Sidebar */
+    --sidebar-background: 40 33% 97%;
+    --sidebar-foreground: 20 25% 20%;
+    --sidebar-primary: 24 60% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 50% 94%;
+    --sidebar-accent-foreground: 340 50% 40%;
+    --sidebar-border: 30 20% 90%;
+    --sidebar-ring: 24 60% 55%;
+  }
+
+  .dark {
+    --background: 20 20% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 20 20% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 20 20% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 24 70% 60%;
+    --primary-foreground: 20 20% 8%;
+
+    --secondary: 150 25% 18%;
+    --secondary-foreground: 150 30% 80%;
+
+    --muted: 20 15% 18%;
+    --muted-foreground: 20 10% 60%;
+
+    --accent: 340 40% 20%;
+    --accent-foreground: 340 40% 85%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 15% 20%;
+    --input: 20 15% 20%;
+    --ring: 24 70% 60%;
+
+    --success: 150 40% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 40 80% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --sidebar-background: 20 20% 10%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 24 70% 60%;
+    --sidebar-primary-foreground: 20 20% 8%;
+    --sidebar-accent: 340 40% 20%;
+    --sidebar-accent-foreground: 340 40% 85%;
+    --sidebar-border: 20 15% 20%;
+    --sidebar-ring: 24 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl;
+  }
+
+  .sweet-shadow {
+    box-shadow: 
+      0 4px 6px -1px hsl(var(--primary) / 0.05),
+      0 10px 20px -3px hsl(var(--primary) / 0.08),
+      0 20px 40px -5px hsl(var(--primary) / 0.05);
+  }
+
+  .sweet-shadow-hover {
+    box-shadow: 
+      0 8px 12px -2px hsl(var(--primary) / 0.08),
+      0 16px 32px -4px hsl(var(--primary) / 0.12),
+      0 24px 48px -6px hsl(var(--primary) / 0.08);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(24 70% 65%) 100%);
+  }
+
+  .gradient-mint {
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(150 35% 88%) 100%);
+  }
+
+  .gradient-pink {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(340 55% 90%) 100%);
+  }
+}
