@@ -1,11 +1,36 @@
 # Cravier (Sweet Shop Management System)
 
-Cravier is a full-stack, single-page application (SPA) designed to modernize the traditional sweet shop experience. It features a seamless customer ordering flow, real-time inventory management for owners, and a robust REST API backend.
+Cravier is a full-stack, single-page application (SPA) designed to modernize the traditional sweet shop experience. It features a seamless customer ordering flow, real-time inventory management for owners, and a robust REST API backend, fully deployed for production using Vercel and Render.
+
+
+---
+
+
+<div align="center">
+
+  ## 🌐 Live Deployment
+  
+  <a href="https://cravier-sweet-shop-management-system.vercel.app/">
+    <img src="https://img.shields.io/badge/🚀_View_Live_Demo-Click_Here-2ea44f?style=for-the-badge&logo=vercel" alt="Live Demo" height="50" />
+  </a>
+
+  <br/><br/>
+  
+  > ⚠️ **Warning:** This is a live production build. Do not click unless you have snacks nearby. The visuals are known to induce donuts craving.
+  
+</div>
+
+---
+
 
 ### Homepage
-![Landing Page](./public/screenshots/landing.png)
+![Landing Page](./public/screenshorts/landing.png)
 
 *(Note: The above image represents the actual Landing Page of the deployed application)*
+
+### Design concept
+![Design concept](./public/screenshorts/concept.png)
+
 
 ---
 
@@ -24,6 +49,10 @@ Cravier is a full-stack, single-page application (SPA) designed to modernize the
 * **Authentication:** JWT (JSON Web Tokens)
 * **Testing:** Jest & Supertest
 
+**Deployment:**
+* **Frontend:** Vercel
+* **Backend:** Render
+
 ---
 
 ## 🤖 My AI Usage
@@ -38,7 +67,7 @@ Cravier is a full-stack, single-page application (SPA) designed to modernize the
 
 The backend follows a strict **Test-Driven Development (TDD)** approach.
 
-![Test Coverage](./public/screenshots/test-coverage.png)
+![Test Coverage](./public/screenshorts/test_1.png)
 
 * **Run Tests:** `npm test` (in backend directory)
 * **Coverage Areas:** User Auth, Sweet CRUD operations, Inventory transactions.
@@ -193,11 +222,61 @@ npm run dev
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](./public/screenshots/dashboard.png)
+![Dashboard](./public/screenshorts/Dashboard.png)
+
+---
 
 ### Admin Panel
-![Admin Panel](./public/screenshots/admin.png)
+![Admin Panel](./public/screenshorts/admin_pannel.png)
+
+
+---
+
+### SignUp
+![signup](./public/screenshorts/signUp.png)
+
+
+---
+
+### LogIn
+![LogIn](./public/screenshorts/login.png)
+
+---
 
 ### Shopping Cart
-![Shopping Cart](./public/screenshots/cart.png)
+![Shopping Cart](./public/screenshorts/cart.png)
+
+
+---
+
+### Order History
+![Order History](./public/screenshorts/orders.png)
+
+
+---
+
+### Restock Form
+![Restock Form](./public/screenshorts/adding.png)
+
+
+---
+
+### Landing Page Screenshots
+
+> ![landing1](./public/screenshorts/landing1.png)
+
+
+> ![landing2](./public/screenshorts/landing2.png)
+
+
+> ![landing3](./public/screenshorts/landing3.png)
+
+
+> ![landing4](./public/screenshorts/landing4.png)
+
+---
+
+### Footer
+![Footer](./public/screenshorts/footer.png)
+
 
