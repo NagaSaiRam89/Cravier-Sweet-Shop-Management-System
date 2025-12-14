@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Candy Wonderland Palette */
+    --cream: 40 45% 96%;
+    --chocolate: 20 40% 18%;
+    --pink: 340 82% 65%;
+    --mint: 160 50% 55%;
+    --caramel: 32 75% 55%;
+    --vanilla: 45 50% 95%;
+    --strawberry: 350 85% 70%;
+    --lavender: 270 50% 75%;
+    
+    /* System Colors mapping to Palette */
+    --background: 40 45% 96%;
+    --foreground: 20 40% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 40% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 40% 18%;
+
+    --primary: 340 82% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 50% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 30% 92%;
+    --muted-foreground: 20 20% 45%;
+
+    --accent: 32 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 30% 88%;
+    --input: 45 50% 95%;
+    --ring: 340 82% 65%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --cream: 20 25% 10%;
+    --chocolate: 40 30% 92%;
+    --pink: 340 75% 60%;
+    --mint: 160 45% 50%;
+    --caramel: 32 70% 50%;
+    --vanilla: 20 20% 15%;
+    --strawberry: 350 80% 65%;
+    --lavender: 270 45% 65%;
+
+    --background: 20 25% 8%;
+    --foreground: 40 30% 92%;
+
+    --card: 20 25% 12%;
+    --card-foreground: 40 30% 92%;
+
+    --popover: 20 25% 12%;
+    --popover-foreground: 40 30% 92%;
+
+    --primary: 340 75% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 45% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 20 20% 18%;
+    --muted-foreground: 40 20% 60%;
+
+    --accent: 32 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 20% 20%;
+    --input: 20 20% 15%;
+    --ring: 340 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Playfair Display', serif; }
+  .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  
+  .glass { @apply bg-card/70 backdrop-blur-xl border border-white/20; }
+  
+  .sweet-shadow {
+    box-shadow: 
+      0 4px 6px -1px hsl(var(--primary) / 0.08),
+      0 10px 20px -3px hsl(var(--primary) / 0.12),
+      0 20px 40px -5px hsl(var(--primary) / 0.08);
+  }
+  
+  .sweet-shadow-hover {
+    box-shadow: 
+      0 8px 16px -2px hsl(var(--primary) / 0.12),
+      0 20px 40px -4px hsl(var(--primary) / 0.16),
+      0 30px 60px -6px hsl(var(--primary) / 0.1);
+  }
+
+  .gradient-candy { background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--strawberry)) 50%, hsl(var(--caramel)) 100%); }
+  .gradient-pink { background: linear-gradient(135deg, hsl(var(--pink)) 0%, hsl(var(--strawberry)) 100%); }
+  
+  .text-gradient-candy {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--caramel)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .candy-glow { filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.4)); }
+  .hover-wiggle:hover { animation: wiggle 0.3s ease-in-out; }
+  
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+}
