@@ -6,21 +6,6 @@ Cravier is a full-stack, single-page application (SPA) designed to modernize the
 ---
 
 
-<div align="center">
-
-  ## 🌐 Live Deployment
-  
-  <a href="https://cravier-sweet-shop-management-system.vercel.app/">
-    <img src="https://img.shields.io/badge/🚀_View_Live_Demo-Click_Here-2ea44f?style=for-the-badge&logo=vercel" alt="Live Demo" height="50" />
-  </a>
-
-  <br/><br/>
-  
-  > ⚠️ **Warning:** This is a live production build. Do not click unless you have snacks nearby. The visuals are known to induce donuts craving.
-  
-</div>
-
----
 
 
 ### Homepage
@@ -52,6 +37,23 @@ Cravier is a full-stack, single-page application (SPA) designed to modernize the
 **Deployment:**
 * **Frontend:** Vercel
 * **Backend:** Render
+
+
+---
+
+<div align="center">
+
+  ## 🌐 Live Deployment
+  
+  <a href="https://cravier-sweet-shop-management-system.vercel.app/">
+    <img src="https://img.shields.io/badge/🚀_View_Live_Demo-Click_Here-2ea44f?style=for-the-badge&logo=vercel" alt="Live Demo" height="50" />
+  </a>
+
+  <br/><br/>
+  
+  > ⚠️ **Warning:** This is a live production build. Do not click unless you have snacks nearby. The visuals are known to induce donuts craving.
+  
+</div>
 
 ---
 
